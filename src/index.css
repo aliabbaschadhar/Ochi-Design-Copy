@@ -1,3 +1,31 @@
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'FoundersGrotesk';
+    src: url('./assets/fonts/FoundersGrotesk-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('./assets/fonts/NeueMontreal-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.has-scroll-smooth {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+[data-scroll-container] {
+    min-height: 100vh;
+}
