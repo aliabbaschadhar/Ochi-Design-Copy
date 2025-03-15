@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'founders': ['FoundersGrotesk', 'sans-serif'],
+        'neue': ['NeueMontreal', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
