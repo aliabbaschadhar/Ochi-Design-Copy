@@ -1,5 +1,5 @@
 import React from 'react'
-import OchiSvg from '../assets/Images/OchiSvg';
+import { OchiSvg } from "../assets/Images/images"
 
 function Navbar() {
     return (
