@@ -1,6 +1,6 @@
 import React from 'react'
 import { contentImage } from "../assets/Images/images"
-import Button from './Button'
+import { FaArrowUpLong } from 'react-icons/fa6';
 
 function LandingPage() {
     return (
@@ -36,7 +36,7 @@ function LandingPage() {
                 className='border-t-2 border-zinc-800 w-full mt-20 flex items-center justify-between px-20 py-[0.5vw]'
             >
                 {
-                    ["For public and private companies", "From the first pitch to IPO", <Button />]
+                    ["For public and private companies", "From the first pitch to IPO"]
                         .map((item, index) => (
                             <div
                                 key={index}
@@ -46,9 +46,27 @@ function LandingPage() {
                             </div>
                         ))
                 }
+                <div
+                    className='start flex items-center gap-4 group cursor-pointer'
+                >
+                    <div
+                        className='px-4 py-2 border-2 border-zinc-800 rounded-full uppercase font-neue text-sm group-hover:text-white group-hover:bg-zinc-800 transition-colors duration-300'
+                    >
+                        Start the project
+                    </div>
+                    <div
+                        className='w-10 h-10 rounded-full border-2 border-zinc-800 flex items-center justify-center group-hover:bg-zinc-800 group-hover:text-white transition-colors duration-300'
+                    >
+                        <span
+                            className='rotate-45'
+                        >
+                            <FaArrowUpLong />
+                        </span>
+                    </div>
+                </div>
             </div>
         </main >
     )
 }
 
-export default LandingPage
+export default LandingPage;
