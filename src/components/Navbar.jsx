@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
+// eslint-disable-next-line no-unused-vars
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
 import { OchiSvg } from "../assets/Images/images"
 
 function Navbar() {
+    const [hidden, setHidden] = useState(false)
+    const { scrollY } = useScroll() // This hook is used to get the scrollY value and check the progress of the scroll
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const previous = scrollY.getPrevious() // To get the previous value of the scrollY
+        if (latest > previous && latest > 150) {
+            setHidden(true)
+        } else {
+            setHidden(false)
+        }
+    })
+
     return (
-        <nav className='w-full px-20 py-8 flex items-center justify-between font-neue fixed top-0 left-0 z-50 bg-transparent backdrop-blur-md'>
+        <motion.nav
+            className='w-full px-20 py-8 flex items-center justify-between font-neue fixed top-0 left-0 z-50 bg-transparent backdrop-blur-md'
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: "-100%" }
+            }}
+            // Variants are used here like if hidden is true then apply the animation of hidden: {y: "-100%"} else visible: { y: 0} in variants object
+            animate={hidden ? "hidden" : "visible"}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+        >
             <div className='text-2xl font-bold cursor-pointer'>
                 <OchiSvg />
             </div>
@@ -21,7 +44,7 @@ function Navbar() {
                     </div>
                 ))}
             </div>
-        </nav>
+        </motion.nav>
     )
 }
 
