@@ -13,7 +13,7 @@ function LandingPage() {
                                 key={index}
                             >
                                 <div
-                                    className='w-fit flex items-end overflow-hidden'
+                                    className='w-fit flex items-center justify-center overflow-hidden'
                                 >
                                     {index === 1 && (
                                         <div
@@ -23,7 +23,7 @@ function LandingPage() {
                                         </div>
                                     )}
                                     <h1
-                                        className='uppercase text-[7.5vw] leading-[6.5vw] tracking-tight font-founders'
+                                        className='uppercase text-[8vw] leading-[6.5vw] tracking-tight font-founders flex items-center'
                                     >
                                         {item}
                                     </h1>
