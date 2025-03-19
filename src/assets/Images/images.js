@@ -7,6 +7,7 @@ import FLogo1 from "./logo002.svg"
 import FLogo2 from "./logo003.png"
 import Salience_Website from "./Salience_Website.png"
 import William from "./William-Barnes.png"
+import ochiFavicon from "./ochiFavicon.png"
 
 
 export {
@@ -19,4 +20,5 @@ export {
     FLogo2,
     Salience_Website,
     William,
+    ochiFavicon,
 }
