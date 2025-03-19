@@ -4,7 +4,7 @@ import { EyeBall } from './'
 
 function Eyes() {
     return (
-        <div className='eyes w-full h-screen overflow-hidden'>
+        <section className='eyes w-full h-screen overflow-hidden'>
             <div
                 className='relative w-full h-full bg-cover bg-center '
                 style={{ backgroundImage: `url(${Eyesbg})` }}
@@ -14,7 +14,7 @@ function Eyes() {
                     <EyeBall />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
