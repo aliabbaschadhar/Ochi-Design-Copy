@@ -7,6 +7,8 @@ import Eyes from "./Eyes"
 import EyeBall from "./EyeBall"
 import Featured from "./Featured"
 import Card from "./Card"
+import Reviews from "./Reviews"
+import ReviewComponent from "./ReviewComponent"
 
 
 export {
@@ -19,4 +21,6 @@ export {
     EyeBall,
     Featured,
     Card,
+    Reviews,
+    ReviewComponent,
 }

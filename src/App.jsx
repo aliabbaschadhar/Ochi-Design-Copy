@@ -1,4 +1,4 @@
-import { About, Eyes, Featured, LandingPage, Marquee, Navbar } from "./components";
+import { About, Eyes, Featured, LandingPage, Marquee, Navbar, Reviews } from "./components";
 
 export default function App() {
   return (
@@ -9,6 +9,7 @@ export default function App() {
       <About />
       <Eyes />
       <Featured />
+      <Reviews />
     </main>
   )
 }
