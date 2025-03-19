@@ -4,6 +4,8 @@ import Marquee from "./Marquee"
 import About from "./About"
 import Button from "./Button"
 import Eyes from "./Eyes"
+import EyeBall from "./EyeBall"
+
 
 export {
     Navbar,
@@ -12,5 +14,5 @@ export {
     About,
     Button,
     Eyes,
-
+    EyeBall,
 }
