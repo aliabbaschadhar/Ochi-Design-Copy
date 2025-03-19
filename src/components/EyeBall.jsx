@@ -58,31 +58,27 @@ function EyeBall() {
 
     return (
         <div
-            className='cursor-pointer w-[14vw] h-[14vw] flex items-center justify-center rounded-full bg-white'
+            className='w-[14vw] h-[14vw] flex items-center justify-center rounded-full bg-white'
             ref={eyeContainerRef}
         >
             <div
-                className='w-2/3 h-2/3 rounded-full bg-zinc-900'
+                className='w-2/3 h-2/3 rounded-full bg-zinc-900 flex items-center justify-center relative'
                 style={{
                     transform: `translate(${eyePosition.x / 2}px, ${eyePosition.y / 2}px)`,
-                    position: 'relative',
                     transition: 'transform 0.1s ease-out'
                 }}
             >
+                {/* Play text stays centered in the black div */}
+                <div className='text-white text-2xl font-neue absolute z-10 uppercase'>Play</div>
+
+                {/* White dot that moves independently */}
                 <div
-                    className="absolute"
+                    className='w-8 h-8 rounded-full bg-white absolute'
                     style={{
-                        width: '40px',
-                        height: '40px',
-                        top: '50%',
-                        left: '50%',
-                        transform: `translate(calc(-50% + ${eyePosition.x}px), calc(-50% + ${eyePosition.y}px))`,
+                        transform: `translate(${eyePosition.x}px, ${eyePosition.y}px)`,
                         transition: 'transform 0.1s ease-out'
                     }}
-                >
-                    <div className='text-white text-2xl font-neue'>Play</div>
-                    <div className='w-10 h-10 rounded-full bg-white'></div>
-                </div>
+                ></div>
             </div>
         </div>
     )
