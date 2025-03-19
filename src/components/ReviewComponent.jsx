@@ -89,11 +89,11 @@ export function Services({ text = "defaultTag" }) {
     return (
         <div className="arrowlink w-fit py-1">
             <a href="#" className="flex items-center gap-3 group">
-                <div className="hover:text-[#F1F1F1] hover:bg-zinc-900 uppercase text-[0.9vw] mt-1 font-medium text-zinc-900 w-fit px-5 py-2 rounded-full border border-zinc-900 bg-[#F1F1F1]">
+                <div className="uppercase text-[0.9vw] mt-1 font-medium text-zinc-900 w-fit px-5 py-2 rounded-full border border-zinc-900 bg-white transition-all duration-300 group-hover:text-white group-hover:bg-zinc-900">
                     {text}
                 </div>
-                <div className="w-[1.8vw] h-[1.8vw] flex items-center justify-center bg-[#F1F1F1] rounded-full group-hover:bg-zinc-900 transition-colors duration-300">
-                    <FaArrowUpLong className="rotate-45 text-zinc-900 group-hover:text-[#F1F1F1] transition-colors duration-300" />
+                <div className="w-[1.8vw] h-[1.8vw] flex items-center justify-center bg-white border border-zinc-900 rounded-full transition-all duration-300 group-hover:bg-zinc-900">
+                    <FaArrowUpLong className="rotate-45 text-zinc-900 transition-all duration-300 group-hover:text-white" />
                 </div>
             </a>
         </div>

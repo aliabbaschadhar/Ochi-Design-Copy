@@ -9,6 +9,7 @@ import Featured from "./Featured"
 import Card from "./Card"
 import Reviews from "./Reviews"
 import ReviewComponent from "./ReviewComponent"
+import BeforeFooter from "./BeforeFooter"
 
 
 export {
@@ -23,4 +24,5 @@ export {
     Card,
     Reviews,
     ReviewComponent,
+    BeforeFooter,
 }

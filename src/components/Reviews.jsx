@@ -94,8 +94,8 @@ const reviews = [
 function Reviews() {
     return (
         <>
-            <div className="w-full bg-[#F1F1F1]">
-                <div className="w-full px-[4vw] pt-20 pb-8">
+            <div className="w-full bg-white">
+                <div className="w-full px-10 pt-20 pb-8">
                     <h1 className="text-[4.3vw] font-neue text-zinc-900 tracking-tight">
                         Client's Reviews
                     </h1>
