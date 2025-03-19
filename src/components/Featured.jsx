@@ -2,8 +2,10 @@ import React from 'react'
 
 function Featured() {
     return (
-        <div>Featured</div>
+        <section>
+            <h1>Featured projects</h1>
+        </section>
     )
 }
 
-export default Featured
+export default Featured;
