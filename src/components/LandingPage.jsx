@@ -5,7 +5,7 @@ import { FaArrowUpLong } from 'react-icons/fa6';
 function LandingPage() {
     return (
         <main className='w-full h-screen pt-1'>
-            <div className='textStructure mt-40 px-20'>
+            <div className='textStructure mt-40 px-10'>
                 {
                     ["We create", "Eye-Opening", "Presentations"]
                         .map((item, index) => (
@@ -13,7 +13,7 @@ function LandingPage() {
                                 key={index}
                             >
                                 <div
-                                    className='w-fit flex items-end overflow-hidden'
+                                    className='w-fit flex items-center justify-center overflow-hidden'
                                 >
                                     {index === 1 && (
                                         <div
@@ -23,7 +23,7 @@ function LandingPage() {
                                         </div>
                                     )}
                                     <h1
-                                        className='uppercase text-[7.5vw] leading-[6.5vw] tracking-tight font-founders'
+                                        className='uppercase text-[8vw] leading-[6.5vw] tracking-tight font-founders flex items-center'
                                     >
                                         {item}
                                     </h1>
@@ -33,7 +33,7 @@ function LandingPage() {
                 }
             </div>
             <div
-                className='border-t-2 border-zinc-800 w-full mt-20 flex items-center justify-between px-20 py-[0.5vw]'
+                className='border-t-2 border-zinc-800 w-full mt-20 flex items-center justify-between px-10 py-[0.5vw]'
             >
                 {
                     ["For public and private companies", "From the first pitch to IPO"]
