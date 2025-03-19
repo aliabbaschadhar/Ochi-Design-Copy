@@ -5,6 +5,7 @@ import About from "./About"
 import Button from "./Button"
 import Eyes from "./Eyes"
 import EyeBall from "./EyeBall"
+import Featured from "./Featured"
 
 
 export {
@@ -15,4 +16,5 @@ export {
     Button,
     Eyes,
     EyeBall,
+    Featured,
 }
