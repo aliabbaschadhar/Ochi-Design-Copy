@@ -8,6 +8,10 @@ import FLogo2 from "./logo003.png"
 import Salience_Website from "./Salience_Website.png"
 import William from "./William-Barnes.png"
 import ochiFavicon from "./ochiFavicon.png"
+import Fyde from "./Fyde.png"
+import ATG from "./ATG.png"
+import AH2 from "./ah2.png"
+import Vise from "./Vise.png"
 
 
 export {
@@ -21,4 +25,8 @@ export {
     Salience_Website,
     William,
     ochiFavicon,
+    Fyde,
+    ATG,
+    AH2,
+    Vise
 }
