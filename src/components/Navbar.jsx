@@ -18,7 +18,7 @@ function Navbar() {
 
     return (
         <motion.nav
-            className='w-full px-20 py-8 flex items-center justify-between font-neue fixed top-0 left-0 z-50 bg-transparent backdrop-blur-md'
+            className='w-full px-10 py-8 flex items-center justify-between font-neue fixed top-0 left-0 z-50 bg-transparent backdrop-blur-md'
             variants={{
                 visible: { y: 0 },
                 hidden: { y: "-100%" }

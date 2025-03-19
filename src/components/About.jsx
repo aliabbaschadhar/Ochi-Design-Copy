@@ -19,7 +19,7 @@ function About() {
                 <u>raise funds, sell products, explain complex ideas,</u> and <u>hire great people</u>
             </h1>
 
-            <div className='w-full flex items-start justify-between border-t-[2px] border-[#909c9a] mt-20 pt-10 px-20 font-neue text-zinc-800 pb-[15vh]'>
+            <div className='w-full flex items-start justify-between border-t-[2px] border-[#909c9a] mt-20 pt-10 px-10 font-neue text-zinc-800 pb-[15vh]'>
                 <h4 className='w-[50vw] text-[1.2vw]'>What you can expect:</h4>
                 <div className='w-[50vw] text-[1.2vw] flex justify-between'>
                     <div className='w-1/2 flex flex-col gap-8 leading-normal'>
@@ -40,7 +40,7 @@ function About() {
                 </div>
             </div>
 
-            <div className='w-full flex items-start border-t-[1px] border-[#889593] mt-20 pt-10 pb-20 px-20 group'>
+            <div className='w-full flex items-start border-t-[1px] border-[#889593] mt-20 pt-10 pb-20 px-10 group'>
                 <div className='w-1/2 font-neue '>
                     <h1 className='text-[4vw] '>Our Approach</h1>
                     {/* Button component with hover handlers that affect the image */}
