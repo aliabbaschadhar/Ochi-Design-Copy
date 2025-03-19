@@ -12,6 +12,8 @@ import Fyde from "./Fyde.png"
 import ATG from "./ATG.png"
 import AH2 from "./ah2.png"
 import Vise from "./Vise.png"
+import Nina from './Nina.png'
+import Tomer from "./Tomer.png"
 
 
 export {
@@ -28,5 +30,7 @@ export {
     Fyde,
     ATG,
     AH2,
-    Vise
+    Vise,
+    Nina,
+    Tomer
 }
