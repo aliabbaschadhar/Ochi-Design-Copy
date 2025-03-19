@@ -10,6 +10,7 @@ import Card from "./Card"
 import Reviews from "./Reviews"
 import ReviewComponent from "./ReviewComponent"
 import BeforeFooter from "./BeforeFooter"
+import StartProject from "./StartProject"
 
 
 export {
@@ -25,4 +26,5 @@ export {
     Reviews,
     ReviewComponent,
     BeforeFooter,
+    StartProject,
 }

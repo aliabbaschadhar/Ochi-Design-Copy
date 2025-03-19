@@ -1,4 +1,15 @@
-import { About, Eyes, Featured, LandingPage, Marquee, Navbar, Reviews } from "./components";
+import {
+  About,
+  BeforeFooter,
+  Eyes,
+  Featured,
+  LandingPage,
+  Marquee,
+  Navbar,
+  Reviews,
+  StartProject
+}
+  from "./components";
 
 export default function App() {
   return (
@@ -10,6 +21,8 @@ export default function App() {
       <Eyes />
       <Featured />
       <Reviews />
+      <BeforeFooter />
+      <StartProject />
     </main>
   )
 }
