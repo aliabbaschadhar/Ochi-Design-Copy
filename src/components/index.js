@@ -11,6 +11,7 @@ import Reviews from "./Reviews"
 import ReviewComponent from "./ReviewComponent"
 import BeforeFooter from "./BeforeFooter"
 import StartProject from "./StartProject"
+import Footer from "./Footer"
 
 
 export {
@@ -27,4 +28,5 @@ export {
     ReviewComponent,
     BeforeFooter,
     StartProject,
+    Footer,
 }

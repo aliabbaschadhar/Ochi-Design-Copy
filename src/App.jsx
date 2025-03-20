@@ -3,6 +3,7 @@ import {
   BeforeFooter,
   Eyes,
   Featured,
+  Footer,
   LandingPage,
   Marquee,
   Navbar,
@@ -23,6 +24,7 @@ export default function App() {
       <Reviews />
       <BeforeFooter />
       <StartProject />
+      <Footer />
     </main>
   )
 }
