@@ -10,8 +10,8 @@ function Eyes() {
                 style={{ backgroundImage: `url(${Eyesbg})` }}
                 aria-label="Top view of a desk with design materials">
                 <div className='absolute flex items-center justify-center gap-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                    <EyeBall />
-                    <EyeBall />
+                    <EyeBall eyeText="Play" />
+                    <EyeBall eyeText="Play" />
                 </div>
             </div>
         </section>
