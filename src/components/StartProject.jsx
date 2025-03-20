@@ -3,7 +3,7 @@ import { Button, EyeBall } from "./"
 
 function StartProject() {
     return (
-        <section className='w-full bg-[#cdea68] p-[20vw]' >
+        <section className='w-full bg-[#cdea68] p-[18vw]' >
             <div className='w-full flex flex-col items-center justify-center relative'>
                 {["Ready to", "Start the", "Project ?"]
                     .map((item, index) => (
