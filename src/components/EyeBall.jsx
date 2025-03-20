@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function EyeBall() {
+function EyeBall({ eyeText }) {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
     // Track mouse movement
@@ -69,7 +69,7 @@ function EyeBall() {
                 }}
             >
                 {/* Play text stays centered in the black div */}
-                <div className='text-white text-2xl font-neue absolute z-10 uppercase'>Play</div>
+                <div className='text-white text-2xl font-neue absolute z-10 uppercase'>{eyeText}</div>
 
                 {/* White dot that moves independently */}
                 <div
