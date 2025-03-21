@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Card } from "./"
 import { Salience_Website, CS_Website, AH2, Fyde, Vise, ATG } from '../assets/Images/images'
+import { useAnimation } from 'framer-motion'
 
 function Featured() {
     const cardsData = [
@@ -36,6 +37,13 @@ function Featured() {
         }
     ]
 
+    // We will use the useAnimation hook from motion to create and control animations in a react component.
+    // The useAnimation hook returns an AnimationControls object that allows us to animate a component.
+    // The AnimationControls object has methods like start, stop, animate, isAnimating, animationState, and more.
+
+    // Create animation controls for each card
+    const cards = cardsData.map(() => useAnimation());
+
     return (
         <section className='w-full'>
             <div className='w-full border-zinc-300 border-b-2 py-20 mb-6 px-10'>
@@ -49,17 +57,16 @@ function Featured() {
                             cardName={card.cardName}
                             links={card.links}
                             position={index % 2 === 0 ? 'left' : 'right'}
+                            animationControls={cards[index]}
                         />
                     </div>
                 ))}
             </div>
             <div className='w-full flex justify-center mt-28'>
-                <Button
-                    text="View All Case Studies"
-                />
+                <Button text="View All Case Studies" />
             </div>
         </section>
     )
 }
 
-export default Featured;
+export default Featured
