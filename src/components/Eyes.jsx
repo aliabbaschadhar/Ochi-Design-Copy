@@ -6,6 +6,8 @@ function Eyes() {
     return (
         <section className='eyes w-full h-screen overflow-hidden'>
             <div
+                data-scroll
+                data-scroll-speed='-.7'
                 className='cursor-pointer relative w-full h-full bg-cover bg-center '
                 style={{ backgroundImage: `url(${Eyesbg})` }}
                 aria-label="Top view of a desk with design materials">
