@@ -10,9 +10,6 @@ export default {
         'founders': ['FoundersGrotesk', 'sans-serif'],
         'neue': ['NeueMontreal', 'sans-serif'],
       },
-      screens: {
-        'md': '780px',
-      },
     },
   },
   plugins: [],
