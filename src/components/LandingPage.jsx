@@ -1,6 +1,8 @@
 import React from 'react'
 import { contentImage } from "../assets/Images/images"
 import { FaArrowUpLong } from 'react-icons/fa6';
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion';
 
 function LandingPage() {
     return (
@@ -16,11 +18,14 @@ function LandingPage() {
                                     className='w-fit flex items-center justify-center overflow-hidden'
                                 >
                                     {index === 1 && (
-                                        <div
+                                        <motion.div
                                             className='mr-[1vw] w-[8vw] rounded-md h-[5.7vw] overflow-hidden flex items-center justify-center self-center'
+                                            initial={{ width: 0 }}
+                                            animate={{ width: "8vw" }}
+                                            transition={{ ease: [0.85, 0, 0.15, 1], duration: 1.2, delay: 0.5 }}
                                         >
                                             <img src={contentImage} alt="content" className="w-full h-full object-cover" />
-                                        </div>
+                                        </motion.div>
                                     )}
                                     <h1
                                         className='uppercase text-[8vw] leading-[6.5vw] tracking-tight font-founders flex items-center'
