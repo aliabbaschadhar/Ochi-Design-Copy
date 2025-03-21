@@ -115,7 +115,7 @@ function Footer() {
             </div>
 
             {/* Logo at the end of the page */}
-            <div className="w-full flex justify-center md:justify-start px-6 md:px-10 mt-4 mb-8 md:mb-12">
+            <div className="w-full flex justify-center md:justify-start px-6 md:px-10 mt-1 mb-8 md:mb-12">
                 <svg
                     width="60"
                     height="24"

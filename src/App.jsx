@@ -83,17 +83,29 @@ export default function App() {
       <div
         data-scroll-section
       >
-        <BeforeFooter />
+        <div
+          data-scroll
+          data-scroll-speed="-0.1">  {/* Changed from 0.2 */}
+          <BeforeFooter />
+        </div>
       </div>
       <div
         data-scroll-section
       >
-        <StartProject />
+        <div
+          data-scroll
+          data-scroll-speed="0.1">   {/* Changed from -0.2 */}
+          <StartProject />
+        </div>
       </div>
       <div
         data-scroll-section
       >
-        <Footer />
+        <div
+          data-scroll
+          data-scroll-speed="-0.2">  {/* Changed from -0.3 */}
+          <Footer />
+        </div>
       </div>
     </main>
   )

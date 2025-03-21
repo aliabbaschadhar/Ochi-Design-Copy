@@ -3,7 +3,8 @@ import React from 'react'
 import { FLogo1, FLogo2, FLogo3 } from "./../assets/Images/images"
 function BeforeFooter() {
     return (
-        <section className='w-full h-screen flex items-center px-10 gap-5 '>
+        <section
+            className='w-full h-screen flex items-center px-10 gap-5 '>
             <div className='cardcontainer w-1/2 h-[60vh] '>
                 <div className='card w-full h-full bg-[#004d43] rounded-xl flex items-center justify-center'>
                     <img src={FLogo1} alt="" />
