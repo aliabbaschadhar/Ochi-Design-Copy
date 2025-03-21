@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   About,
   BeforeFooter,
@@ -16,15 +16,43 @@ import LocomotiveScroll from "locomotive-scroll";
 
 
 export default function App() {
+  const [locomotiveInstance, setLocomotiveInstance] = useState(null);
 
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true,
-    });
+    // Function to check if device is desktop (width > 768px)
+    const isDesktop = () => window.innerWidth > 768;
 
-    return () => scroll.destroy();
-  }, []);
+    // Initialize or destroy Locomotive Scroll based on screen size
+    const handleScrollInstance = () => {
+      // If we're on desktop and don't have a locomotive instance
+      if (isDesktop() && !locomotiveInstance) {
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector("[data-scroll-container]"),
+          smooth: true,
+        });
+        setLocomotiveInstance(scroll);
+      }
+      // If we're on mobile and have a locomotive instance
+      else if (!isDesktop() && locomotiveInstance) {
+        locomotiveInstance.destroy();
+        setLocomotiveInstance(null);
+      }
+    };
+
+    // Initial check
+    handleScrollInstance();
+
+    // Add resize listener to handle device switching
+    window.addEventListener('resize', handleScrollInstance);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('resize', handleScrollInstance);
+      if (locomotiveInstance) {
+        locomotiveInstance.destroy();
+      }
+    };
+  }, [locomotiveInstance]);
 
   return (
     <main
@@ -85,7 +113,7 @@ export default function App() {
       >
         <div
           data-scroll
-          data-scroll-speed="-0.1">  {/* Changed from 0.2 */}
+          data-scroll-speed="-0.1">
           <BeforeFooter />
         </div>
       </div>
@@ -94,7 +122,7 @@ export default function App() {
       >
         <div
           data-scroll
-          data-scroll-speed="0.1">   {/* Changed from -0.2 */}
+          data-scroll-speed="0.1">
           <StartProject />
         </div>
       </div>
@@ -103,7 +131,7 @@ export default function App() {
       >
         <div
           data-scroll
-          data-scroll-speed="-0.2">  {/* Changed from -0.3 */}
+          data-scroll-speed="-0.2">
           <Footer />
         </div>
       </div>

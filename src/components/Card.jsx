@@ -13,13 +13,13 @@ function Card({ cardName, cardImg, links, position, animationControls }) {
                 onHoverStart={() => animationControls.start({ y: "0" })}
                 onHoverEnd={() => animationControls.start({ y: "100%" })}
             >
-                <div className={`w-fit overflow-hidden text-[5vw] text-[#cdea68] font-neue absolute top-1/2 transform -translate-y-1/2 z-10 text-nowrap ${position === 'left' ? 'left-full -translate-x-1/2' : 'right-full translate-x-1/2'}`}>
+                <div className={`w-fit overflow-hidden text-[8vw] text-[#cdea68] font-founders absolute top-1/2 transform -translate-y-1/2 z-10 text-nowrap ${position === 'left' ? 'left-full -translate-x-1/2' : 'right-full translate-x-1/2'}`}>
                     {cardName.split("").map((letter, index) => (
                         <motion.span
                             key={index}
                             initial={{ y: "100%" }}
                             animate={animationControls}
-                            transition={{ ease: [0.22, 1, 0.36, 1], delay: index * 0.05 }}
+                            transition={{ ease: [0.22, 1, 0.36, 1], delay: index * 0.03 }}
                             className="inline-block"
                         >
                             {letter === " " ? "\u00A0" : letter}

@@ -18,14 +18,32 @@
     font-style: normal;
 }
 
-.has-scroll-smooth {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+/* Locomotive scroll styles - only apply on desktop */
+@media (min-width: 769px) {
+    .has-scroll-smooth {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    [data-scroll-container] {
+        min-height: 100vh;
+    }
 }
 
-[data-scroll-container] {
-    min-height: 100vh;
+/* Mobile default scroll behavior */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    [data-scroll-container] {
+        overflow: visible;
+    }
+
+    [data-scroll-section] {
+        width: 100%;
+    }
 }
