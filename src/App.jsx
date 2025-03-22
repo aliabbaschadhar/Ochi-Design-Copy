@@ -17,31 +17,78 @@ import LocomotiveScroll from "locomotive-scroll";
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(false);
+  const [scrollInstance, setScrollInstance] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const checkDevice = () => {
-      setIsMobile(window.innerWidth < 1024); // Consider as tablet and mobile
+      const isMobileView = window.innerWidth < 1024;
+
+      // If device type is changing, show loading state
+      if (isMobileView !== isMobile) {
+        setIsLoading(true);
+
+        // Remove locomotive scroll if it exists
+        if (scrollInstance) {
+          scrollInstance.destroy();
+          setScrollInstance(null);
+        }
+
+        // Short delay to show loading state
+        setTimeout(() => {
+          setIsMobile(isMobileView);
+          setIsLoading(false);
+        }, 800);
+      }
     }
-    //  Check on mount
+
+    // Check on mount
     checkDevice();
 
-    window.addEventListener("resize", checkDevice); // Whenever resize happens call the checkDevice function
+    // Add debounced resize handler to avoid performance issues
+    let resizeTimer;
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(checkDevice, 250);
+    };
 
-    return () => window.removeEventListener("resize", checkDevice);
-  }, [])
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(resizeTimer);
+    }
+  }, [isMobile, scrollInstance]);
 
   useEffect(() => {
-    if (!isMobile) {
+    if (!isMobile && !isLoading) {
       const scroll = new LocomotiveScroll({
         el: document.querySelector("[data-scroll-container]"),
         smooth: true,
+        smartphone: {
+          smooth: false
+        },
+        tablet: {
+          smooth: false,
+          breakpoint: 1024
+        }
       });
 
+      setScrollInstance(scroll);
+
       return () => {
-        scroll.destroy();
+        if (scroll) scroll.destroy();
       }
-    };
-  }, [isMobile]);
+    }
+  }, [isMobile, isLoading]);
+
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-[#004d43]"></div>
+      </div>
+    );
+  }
 
   return (
     <main
@@ -57,17 +104,17 @@ export default function App() {
       >
         <div
           data-scroll
-          data-scroll-speed="-.3"
+          data-scroll-speed={!isMobile ? "-.3" : "0"}
         >
           <LandingPage />
         </div>
       </div>
-      {/* <div
+      <div
         data-scroll-section
       >
         <div
           data-scroll
-          data-scroll-speed='-.1'
+          data-scroll-speed={!isMobile ? "-.1" : "0"}
         >
           <Marquee />
         </div>
@@ -77,27 +124,27 @@ export default function App() {
       >
         <div
           data-scroll
-          data-scroll-speed='-.02'
+          data-scroll-speed={!isMobile ? "-0.2" : "0"}
         >
           <About />
         </div>
       </div>
-      <div
+      {/* <div
         data-scroll-section
       >
         <Eyes />
-      </div>
-      <div
+      </div> */}
+      {/* <div
         data-scroll-section
       >
         <Featured />
-      </div>
-      <div
+      </div> */}
+      {/* <div
         data-scroll-section
       >
         <Reviews />
-      </div>
-      <div
+      </div> */}
+      {/* <div
         data-scroll-section
       >
         <div
@@ -105,8 +152,8 @@ export default function App() {
           data-scroll-speed="-0.1">
           <BeforeFooter />
         </div>
-      </div>
-      <div
+      </div> */}
+      {/* <div
         data-scroll-section
       >
         <div
@@ -114,8 +161,8 @@ export default function App() {
           data-scroll-speed="0.1">
           <StartProject />
         </div>
-      </div>
-      <div
+      </div> */}
+      {/* <div
         data-scroll-section
       >
         <div
