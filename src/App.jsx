@@ -139,11 +139,11 @@ export default function App() {
       >
         <Featured />
       </div>
-      {/* <div
+      <div
         data-scroll-section
       >
         <Reviews />
-      </div> */}
+      </div>
       {/* <div
         data-scroll-section
       >
