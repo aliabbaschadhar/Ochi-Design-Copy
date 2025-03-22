@@ -95,17 +95,19 @@ function Reviews() {
     return (
         <>
             <div className="w-full bg-white">
-                <div className="w-full px-10 pt-20 pb-8">
-                    <h1 className="text-[4.3vw] font-neue text-zinc-900 tracking-tight">
+                <div className="w-full px-4 sm:px-6 md:px-10 pt-10 sm:pt-16 md:pt-20 pb-4 sm:pb-6 md:pb-8">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-neue text-zinc-900 tracking-tight">
                         Client's Reviews
                     </h1>
                 </div>
-                {reviews.map((review, index) => (
-                    <ReviewComponent
-                        key={index}
-                        {...review}
-                    />
-                ))}
+                <div className="w-full">
+                    {reviews.map((review, index) => (
+                        <ReviewComponent
+                            key={index}
+                            {...review}
+                        />
+                    ))}
+                </div>
             </div>
         </>
     );
