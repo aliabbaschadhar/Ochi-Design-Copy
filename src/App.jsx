@@ -153,15 +153,15 @@ export default function App() {
           <BeforeFooter />
         </div>
       </div>
-      {/* <div
+      <div
         data-scroll-section
       >
         <div
           data-scroll
-          data-scroll-speed="0.1">
+          data-scroll-speed={!isMobile ? "0.1" : "0"}>
           <StartProject />
         </div>
-      </div> */}
+      </div>
       {/* <div
         data-scroll-section
       >
