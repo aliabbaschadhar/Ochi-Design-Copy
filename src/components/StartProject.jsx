@@ -28,7 +28,7 @@ function StartProject() {
                 <h1 className='font-neue text-sm sm:text-base md:text-lg my-2'>OR</h1>
 
                 <Button
-                    text="helloOchi@gmail.com"
+                    text="hello@ochi.design"
                     styles='text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 xl:px-10 xl:py-5 border-2 border-zinc-900 bg-transparent hover:bg-zinc-900 hover:text-white hover:scale-105 transform transition-all duration-400 lowercase mb-0'
                 />
             </div>
