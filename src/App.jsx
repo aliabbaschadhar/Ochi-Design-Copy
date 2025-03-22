@@ -129,16 +129,16 @@ export default function App() {
           <About />
         </div>
       </div>
-      {/* <div
+      <div
         data-scroll-section
       >
         <Eyes />
-      </div> */}
-      {/* <div
+      </div>
+      <div
         data-scroll-section
       >
         <Featured />
-      </div> */}
+      </div>
       {/* <div
         data-scroll-section
       >

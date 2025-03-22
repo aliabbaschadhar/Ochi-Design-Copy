@@ -24,7 +24,7 @@ function Button({ text, styles, onMouseEnter, onMouseLeave }) {
     return (
         <div>
             <button
-                className={` flex items-center justify-evenly pl-[2vw] px-[0.7vw] py-[0.4vw] text-[1vw] font-medium rounded-full bg-zinc-800 hover:bg-zinc-900 text-white gap-4 mb-4 uppercase ${styles}`}
+                className={` flex items-center justify-evenly pl-[2vw] px-[0.7vw] py-[0.4vw] sm:text-sm md:text-base lg:text-lg font-neue rounded-full bg-zinc-800 hover:bg-zinc-900 text-white gap-4 mb-4 uppercase ${styles}`}
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}
             >
