@@ -50,4 +50,4 @@ function Card({ cardName, cardImg, links, position, animationControls }) {
     )
 }
 
-export default Card
+export default Card;
