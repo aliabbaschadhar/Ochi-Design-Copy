@@ -62,7 +62,7 @@ export default function App() {
           <LandingPage />
         </div>
       </div>
-      <div
+      {/* <div
         data-scroll-section
       >
         <div
@@ -123,7 +123,7 @@ export default function App() {
           data-scroll-speed="-0.2">
           <Footer />
         </div>
-      </div>
+      </div> */}
     </main>
   )
 }
