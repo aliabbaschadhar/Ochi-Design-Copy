@@ -46,7 +46,7 @@ function About() {
                     {/* Button component with hover handlers that affect the image */}
                     <Button
                         text='Read More'
-                        styles="sm:text-xs"
+                        styles=""
                         onMouseEnter={handleButtonMouseEnter}
                         onMouseLeave={handleButtonMouseLeave}
                     />
