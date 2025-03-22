@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   About,
   BeforeFooter,
@@ -16,16 +16,32 @@ import LocomotiveScroll from "locomotive-scroll";
 
 
 export default function App() {
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true,
-    });
+  const [isMobile, setIsMobile] = useState(false);
 
-    return () => {
-      scroll.destroy();
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth < 1024); // Consider as tablet and mobile
+    }
+    //  Check on mount
+    checkDevice();
+
+    window.addEventListener("resize", checkDevice); // Whenever resize happens call the checkDevice function
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, [])
+
+  useEffect(() => {
+    if (!isMobile) {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      });
+
+      return () => {
+        scroll.destroy();
+      }
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <main
