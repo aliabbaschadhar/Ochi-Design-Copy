@@ -8,13 +8,13 @@ function Footer() {
     return (
         <div className="w-full min-h-screen bg-white text-zinc-800 flex flex-col font-founder">
             <div className="flex flex-col md:flex-row p-0">
-                <div className="w-full md:w-1/2 flex flex-col pb-8 md:pb-[6.8vw] pt-10 md:pt-[5.5vw] px-6 md:px-[3.5vw]">
+                <div className="w-full md:w-1/2 flex flex-col pb-8 md:pb-[4vw] lg:pb-[6.8vw] pt-10 md:pt-[3.5vw] lg:pt-[5.5vw] px-6 md:px-[2.5vw] lg:px-[3.5vw]">
                     <div className="headings">
                         {
                             ["EYE-", "OPENING"].map((item, index) => (
                                 <h2
                                     key={index}
-                                    className={`uppercase font-founders leading-none text-6xl sm:text-7xl md:text-[8vw] ${index === 0 ? "-mb-2 sm:-mb-4 md:-mb-8" : ""}`}
+                                    className={`uppercase font-founders leading-none text-6xl sm:text-7xl md:text-[7vw] lg:text-[8vw] ${index === 0 ? "-mb-2 sm:-mb-4 md:-mb-4 lg:-mb-8" : ""}`}
                                 >
                                     {item}
                                 </h2>
@@ -23,19 +23,19 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="w-full md:w-1/2 flex flex-col gap-6 sm:gap-8 md:gap-[3.7vw] pb-8 md:pb-[6.8vw] pt-6 md:pt-[6vw] px-6 md:px-0">
-                    <h2 className="-mb-2 sm:-mb-4 md:-mb-6 uppercase leading-none text-5xl sm:text-6xl md:text-[7.5vw] text-zinc-800 font-founders">
+                <div className="w-full md:w-1/2 flex flex-col gap-6 sm:gap-8 md:gap-[2.5vw] lg:gap-[3.7vw] pb-8 md:pb-[4vw] lg:pb-[6.8vw] pt-6 md:pt-[4vw] lg:pt-[6vw] px-6 md:px-4 lg:px-0">
+                    <h2 className="-mb-2 sm:-mb-4 md:-mb-3 lg:-mb-6 uppercase leading-none text-5xl sm:text-6xl md:text-[7vw] lg:text-[7.5vw] text-zinc-800 font-founders">
                         presentations
                     </h2>
 
-                    <div className="flex flex-col gap-8 md:gap-[2vw]">
-                        <div className="flex flex-col gap-3 md:gap-5">
-                            <p className="text-sm md:text-[1vw] text-zinc-800 font-neue">S:</p>
+                    <div className="flex flex-col gap-8 md:gap-[1.5vw] lg:gap-[2vw]">
+                        <div className="flex flex-col gap-3 md:gap-3 lg:gap-5">
+                            <p className="text-sm md:text-[1.6vw] lg:text-[1.4vw] text-zinc-800 font-neue">S:</p>
                             <div className="flex flex-row md:flex-col flex-wrap gap-3 md:gap-1">
                                 {socialLinks.map((item, index) => (
                                     <a
                                         key={index}
-                                        className="text-base sm:text-lg md:text-[1.1vw] mr-4 md:mr-0 text-zinc-700 tracking-tight font-neue hover:text-zinc-900 transition-colors"
+                                        className="text-base sm:text-lg md:text-[1.5vw] lg:text-[1.3vw] mr-4 md:mr-0 text-zinc-700 tracking-tight font-neue hover:text-zinc-900 transition-colors"
                                         href="#"
                                         aria-label={`Visit our ${item} page`}
                                     >
@@ -48,12 +48,12 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-0 lg:mr-[6.2vw]">
-                            <div className="flex flex-col gap-3 md:gap-4">
-                                <p className="text-sm md:text-[1vw] text-zinc-800 font-neue">L:</p>
+                        <div className="flex flex-col md:flex-row lg:flex-row justify-between items-start gap-8 md:gap-4 lg:gap-0 md:mr-4 lg:mr-[6.2vw]">
+                            <div className="flex flex-col gap-3 md:gap-3 lg:gap-4">
+                                <p className="text-sm md:text-[1.6vw] lg:text-[1.4vw] text-zinc-800 font-neue">L:</p>
                                 <div className="flex flex-col">
                                     <a
-                                        className="text-base sm:text-lg md:text-[1.1vw] text-zinc-700 relative group font-neue hover:text-zinc-900 transition-colors"
+                                        className="text-base sm:text-lg md:text-[1.4vw] lg:text-[1.3vw] text-zinc-700 relative group font-neue hover:text-zinc-900 transition-colors"
                                         href="#"
                                         aria-label="Visit our location"
                                     >
@@ -65,14 +65,14 @@ function Footer() {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col gap-3 md:gap-[1vw]">
-                                <p className="text-sm md:text-[1vw] text-zinc-800 font-neue">M:</p>
+                            <div className="flex flex-col gap-3 md:gap-[0.7vw] lg:gap-[1vw]">
+                                <p className="text-sm md:text-[1.6vw] lg:text-[1.5vw] text-zinc-800 font-neue">M:</p>
                                 <div className="flex flex-row flex-wrap md:flex-col gap-3 md:gap-1">
                                     {menuLinks.map((item, index) => (
                                         <a
                                             key={index}
                                             href="#"
-                                            className="text-base sm:text-lg md:text-[1.1vw] mr-4 md:mr-0 tracking-tight text-zinc-700 relative group font-neue hover:text-zinc-900 transition-colors"
+                                            className="text-base sm:text-lg md:text-[1.5vw] lg:text-[1.4vw] mr-4 md:mr-0 tracking-tight text-zinc-700 relative group font-neue hover:text-zinc-900 transition-colors"
                                             aria-label={`Go to ${item} page`}
                                         >
                                             {item}
@@ -83,12 +83,12 @@ function Footer() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-8 md:gap-[3vw] mt-4 md:mt-0">
-                            <div className="flex flex-col gap-3 md:gap-4">
-                                <p className="text-sm md:text-[1vw] text-zinc-800 font-neue">E:</p>
+                        <div className="flex flex-col gap-8 md:gap-[2vw] lg:gap-[3vw] mt-4 md:mt-2 lg:mt-0">
+                            <div className="flex flex-col gap-3 md:gap-3 lg:gap-4">
+                                <p className="text-sm md:text-[1.6vw] lg:text-[1.3vw] text-zinc-800 font-neue">E:</p>
                                 <div className="flex flex-col">
                                     <a
-                                        className="text-base sm:text-lg md:text-[1.1vw] text-zinc-700 font-neue hover:text-zinc-900 transition-colors"
+                                        className="text-base sm:text-lg md:text-[1.4vw] lg:text-[1.1vw] text-zinc-700 font-neue hover:text-zinc-900 transition-colors"
                                         href="mailto:hello@ochi.design"
                                         aria-label="Email us"
                                     >
@@ -99,7 +99,7 @@ function Footer() {
                                     </a>
                                 </div>
                             </div>
-                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 md:mr-[4.5vw]">
+                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 md:mr-[3vw] lg:mr-[4.5vw]">
                                 <h2 className="text-sm sm:text-base text-zinc-500 font-neue">
                                     © ochi design 2025.
                                     <span className="relative group cursor-pointer ml-1 hover:text-zinc-700 transition-colors">
@@ -115,14 +115,14 @@ function Footer() {
             </div>
 
             {/* Logo at the end of the page */}
-            <div className="w-full flex justify-center md:justify-start px-6 md:px-10 mt-1 mb-8 md:mb-12">
+            <div className="w-full flex justify-center md:justify-start px-6 md:px-8 lg:px-10 mt-1 mb-8 md:mb-10 lg:mb-12">
                 <svg
                     width="60"
                     height="24"
                     viewBox="0 0 72 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="md:w-[72px] md:h-[30px] hover:scale-110 transition-transform duration-300"
+                    className="md:w-[60px] md:h-[25px] lg:w-[72px] lg:h-[30px] hover:scale-110 transition-transform duration-300"
                 >
                     <path
                         d="M9.8393 10.2032C4.22951 10.3257 -0.0459221 14.7356 0.000372391 20.2752C0.0412204 25.3548 4.57808 30.3608 10.6862 29.9226C15.5145 29.5768 19.9015 25.4119 19.8525 20.0057C19.8035 14.5995 15.1904 10.0916 9.8393 10.2032ZM9.89649 25.7005C6.87101 25.7005 4.39834 23.1144 4.40924 19.9839C4.39525 19.2507 4.52792 18.522 4.79947 17.8407C5.07102 17.1594 5.47597 16.5392 5.99056 16.0164C6.50515 15.4937 7.11902 15.0789 7.79613 14.7966C8.47324 14.5142 9.19995 14.3698 9.93362 14.372C10.6673 14.3742 11.3931 14.5228 12.0686 14.8092C12.744 15.0956 13.3554 15.514 13.8668 16.0398C14.3783 16.5656 14.7796 17.1882 15.0471 17.8711C15.3146 18.554 15.4429 19.2834 15.4246 20.0166C15.4409 23.1008 12.9111 25.7059 9.88832 25.7005H9.89649Z"
