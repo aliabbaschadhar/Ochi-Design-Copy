@@ -1,10 +1,8 @@
 # Ochi Design Website Clone
 
-This project is a frontend clone of the [Ochi Design](https://ochi.design/) website, created for educational purposes to demonstrate modern web development techniques and showcase frontend skills.
+This project is a frontend clone of the [Ochi Design](https://ochi-design-copy.vercel.app/) website, created for educational purposes to demonstrate modern web development techniques and showcase frontend skills.
 
 > **Disclaimer**: This project is a clone created solely for learning purposes and is not affiliated with Ochi Design.
-
-![Ochi Design Clone Preview](https://placeholder-for-screenshot.png)
 
 ## ✨ Features
 
