@@ -124,7 +124,7 @@ export default function App() {
       >
         <div
           data-scroll
-          data-scroll-speed={!isMobile ? "-0.2" : "0"}
+          data-scroll-speed={!isMobile ? "-.02" : "0"}
         >
           <About />
         </div>
