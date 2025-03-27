@@ -58,7 +58,7 @@ function Marquee() {
                     ))}
 
                     {/* Second set for seamless loop */}
-                    {/* {marqueeText.map((text, index) => (
+                    {marqueeText.map((text, index) => (
                         <motion.h1
                             key={`second-${index}`}
                             className='text-[20vw] md:text-[23vw] lg:text-[12vw] leading-none font-founders uppercase pr-[1vw] text-white inline-block'
@@ -73,7 +73,7 @@ function Marquee() {
                         >
                             {text}
                         </motion.h1>
-                    ))} */}
+                    ))}
                 </div>
             </div>
         </div>
