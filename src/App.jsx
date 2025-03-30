@@ -20,6 +20,21 @@ export default function App() {
   const [scrollInstance, setScrollInstance] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Add this useEffect for the Contra button script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://contra.com/static/embed/sdk.js';
+    script.async = true;
+    script.charset = 'utf-8';
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     const checkDevice = () => {
       const isMobileView = window.innerWidth < 1024;
@@ -95,6 +110,15 @@ export default function App() {
       data-scroll-container
       className="w-full min-h-screen"
     >
+      {/* Floating Hire Me button */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <div className="contra-hire-me-button"
+          data-analyticsUserId="5857ac64-157f-4860-abd5-6bc65b9e98db"
+          data-theme="light"
+          data-username="aliabbaschadhar">
+        </div>
+      </div>
+
       <div data-scroll-section>
         <Navbar />
       </div>

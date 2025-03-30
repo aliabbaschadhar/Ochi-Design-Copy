@@ -61,7 +61,7 @@ function Marquee() {
                     {marqueeText.map((text, index) => (
                         <motion.h1
                             key={`second-${index}`}
-                            className='text-[20vw] md:text-[23vw] lg:text-[12vw] leading-none font-founders uppercase pr-[1vw] text-white inline-block'
+                            className='text-[20vw] md:text-[16vw] lg:text-[23vw] leading-none font-founders uppercase pr-[2vw] text-white inline-block'
                             initial={{ x: "0%" }}
                             animate={{ x: "-100%" }}
                             transition={{
